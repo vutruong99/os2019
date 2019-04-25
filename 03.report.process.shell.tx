@@ -1,0 +1,47 @@
+$ps -aux | less
+
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root         1  0.0  0.0 225716  9552 ?        Ss   08:43   0:01 /sbin/init splash
+root         2  0.0  0.0      0     0 ?        S    08:43   0:00 [kthreadd]
+root         4  0.0  0.0      0     0 ?        I<   08:43   0:00 [kworker/0:0H]
+root         6  0.0  0.0      0     0 ?        I<   08:43   0:00 [mm_percpu_wq]
+root         7  0.0  0.0      0     0 ?        S    08:43   0:00 [ksoftirqd/0]
+root         8  0.0  0.0      0     0 ?        I    08:43   0:02 [rcu_sched]
+root         9  0.0  0.0      0     0 ?        I    08:43   0:00 [rcu_bh]
+root        10  0.0  0.0      0     0 ?        S    08:43   0:00 [migration/0]
+root        11  0.0  0.0      0     0 ?        S    08:43   0:00 [watchdog/0]
+root        12  0.0  0.0      0     0 ?        S    08:43   0:00 [cpuhp/0]
+root        13  0.0  0.0      0     0 ?        S    08:43   0:00 [cpuhp/1]
+root        14  0.0  0.0      0     0 ?        S    08:43   0:00 [watchdog/1]
+root        15  0.0  0.0      0     0 ?        S    08:43   0:00 [migration/1]
+root        16  0.0  0.0      0     0 ?        S    08:43   0:00 [ksoftirqd/1]
+
+
+$ gcalccmd
+> 4+4
+8
+
+$ ps aux | grep gcalccmd
+popnap    3537  0.0  0.0 272140 11004 pts/0    Sl+  09:49   0:00 gcalccmd
+popnap    3575  0.0  0.0  15972  1108 pts/1    S+   09:52   0:00 grep --color=auto gcalccmd
+
+$ cat /proc/3537/status
+Name:	gcalccmd
+Umask:	0022
+State:	S (sleeping)
+Tgid:	3537
+Ngid:	0
+Pid:	3537
+PPid:	2001
+
+$ kill -SIGSTOP 3785
+$ kill -SIGCONT 3785
+$ kill -SIGKILL 378
+gcalccmd
+> 
+[2]+  Stopped                 gcalccmd
+
+
+
+
+
