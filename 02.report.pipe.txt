@@ -1,0 +1,32 @@
+$ ls | grep list
+list
+
+
+$ wc -w list 
+6 list
+
+
+
+$ free -m
+              total        used        free      shared  buff/cache   available
+Mem:          15959        1825       13095         253        1038       13603
+Swap:          2047           0        2047
+
+
+$ lscpu
+Architecture:        x86_64
+CPU op-mode(s):      32-bit, 64-bit
+Byte Order:          Little Endian
+CPU(s):              8
+On-line CPU(s) list: 0-7
+Thread(s) per core:  2
+Core(s) per socket:  4
+
+$ find ./Pictures -name *.jpg
+
+
+
+
+
+
+
