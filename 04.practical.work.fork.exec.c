@@ -18,7 +18,7 @@ int main(){
     else if (pid == 0){
       // you are child 2
       printf("child process 2 begin run:\n");
-      char *arg[]={"/bin/free","-h",NULL};
+      char *arg[]={"/usr/bin/free","-h",NULL};
       execvp(arg[0],arg);
     }
     else printf("error can not fork second child\n");
@@ -26,7 +26,7 @@ int main(){
   else if (pid == 0){
     // you are child 1
     printf("child process 1 begin run:\n");
-    char *arg[]={"/bin/ps","-ef",NULL};
+    char *arg[]={"/usr/bin/ps","-ef",NULL};
     execvp(arg[0],arg);
   }
   else printf("error can not fork anything\n");
