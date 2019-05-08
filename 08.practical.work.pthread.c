@@ -48,7 +48,7 @@ void *produceThread(void* param) {
     item *i3=initItem('1',2,'0');
     produce(i1);
     produce(i2);
-    produce(i2);
+    produce(i3);
 	pthread_exit(NULL);
 }
 
