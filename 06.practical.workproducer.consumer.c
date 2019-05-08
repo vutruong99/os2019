@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <pthread.h>
 #define BUFFER_SIZE 10
 
 typedef struct {
@@ -45,7 +46,7 @@ int main() {
     // Item declaration
     item *i1=initItem('1',4,'1');
     item *i2=initItem('0',2,'0');
-
+    
     // print item list 
     printf("Item 1 Type = %c   Amount = %d    Unit = %c\n", i1->type, i1->amount, i1->unit);
     printf("\nItem 2 Type = %c   Amount = %d    Unit = %c\n", i2->type, i2->amount, i2->unit);

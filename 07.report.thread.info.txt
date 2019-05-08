@@ -1,0 +1,7 @@
+$ ps -o nlwp 1569
+NLWP
+  81
+
+$ ls /proc/1569/task | wc -w
+81
+
