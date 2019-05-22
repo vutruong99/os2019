@@ -62,7 +62,7 @@ int main() {
     pthread_t tid;
     printf("Thread for produce function\n");
     pthread_create(&tid,NULL,produceThread,NULL);
-    pthread_join(tid,NULL);
+    //pthread_join(tid,NULL);
     printf("Thread for consume function\n");
     pthread_create(&tid,NULL,consumeThread,NULL);
     pthread_exit(NULL);
